@@ -5,3 +5,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: next-intl\n"
 "X-Crowdin-SourceKey: msgstr\n"
+
+#. The title of the application
+#: src/app/layout.tsx:13
+msgid "lNLCAE"
+msgstr "next-intl example"
