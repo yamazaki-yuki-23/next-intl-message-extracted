@@ -1,6 +1,8 @@
-import {NextIntlClientProvider} from 'next-intl';
+import {Locale, NextIntlClientProvider} from 'next-intl';
 import {getExtracted, getLocale} from 'next-intl/server';
 import {Inter} from 'next/font/google';
+import LocaleSwitcher from './LocaleSwitcher';
+import {cookies} from 'next/headers';
 
 const inter = Inter({subsets: ['latin']});
 
@@ -21,10 +23,19 @@ export async function generateMetadata() {
 export default async function LocaleLayout({children}: Props) {
   const locale = await getLocale();
 
+  const changeLocaleAction = async (newLocale: Locale) => {
+    'use server';
+    const store = await cookies();
+    store.set('locale', newLocale);
+  };
+
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          {children}
+          <LocaleSwitcher changeLocaleAction={changeLocaleAction} />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
