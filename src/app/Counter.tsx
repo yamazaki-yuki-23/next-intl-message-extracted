@@ -1,0 +1,20 @@
+'use client';
+
+import {useExtracted} from 'next-intl';
+import {useState} from 'react';
+
+export default function Counter() {
+  const [count, setCount] = useState(0);
+  const t = useExtracted();
+
+  const onIncrement = () => {
+    setCount((prev) => prev + 1);
+  };
+
+  return (
+    <>
+      <p>{t('Count: {count, number}', {count})}</p>
+      <button onClick={onIncrement}>{t('Increment')}</button>
+    </>
+  );
+}

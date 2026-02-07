@@ -6,6 +6,14 @@ msgstr ""
 "X-Generator: next-intl\n"
 "X-Crowdin-SourceKey: msgstr\n"
 
+#: src/app/Counter.tsx:16
+msgid "jm1lmy"
+msgstr ""
+
+#: src/app/Counter.tsx:17
+msgid "tQLRmz"
+msgstr ""
+
 #. The title of the application
 #: src/app/layout.tsx:14
 msgid "lNLCAE"

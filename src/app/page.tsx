@@ -1,4 +1,5 @@
 import {useExtracted} from 'next-intl';
+import Counter from './Counter';
 
 export default function Home() {
   const t = useExtracted();
@@ -6,6 +7,7 @@ export default function Home() {
   return (
     <div>
       <h1>{t('Hey {name}', user)}</h1>
+      <Counter />
     </div>
   );
 }
