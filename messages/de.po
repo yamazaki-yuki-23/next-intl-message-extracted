@@ -8,17 +8,17 @@ msgstr ""
 
 #: src/app/Counter.tsx:16
 msgid "jm1lmy"
-msgstr ""
+msgstr "Anzahl: {count, number}"
 
 #: src/app/Counter.tsx:17
 msgid "tQLRmz"
-msgstr ""
+msgstr "Erhöhen"
 
 #. The title of the application
 #: src/app/layout.tsx:14
 msgid "lNLCAE"
-msgstr ""
+msgstr "next-intl Beispiel"
 
 #: src/app/page.tsx:9
 msgid "zYANcq"
-msgstr ""
+msgstr "Hallo {name}"
